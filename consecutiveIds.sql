@@ -1,0 +1,5 @@
+CREATE PROCEDURE consecutiveIds()
+BEGIN
+SELECT id AS oldId, RANK()OVER(ORDER BY id) AS newId	
+FROM itemIds;
+END
